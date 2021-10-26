@@ -1,0 +1,80 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.navbar {
+  justify-content: space-around;
+}
+
+.createorder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  padding: 25px;
+}
+
+.createorder-list-height {
+  height: 150px;
+  overflow: scroll;
+  margin-bottom: 25px;
+}
+
+.login{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 25px;
+}
+
+.container {
+	border: 1px solid black;
+	margin-bottom: 25px;
+}
+
+.callme__number {
+	margin-right: 25px;
+	margin-top: 15px;
+}
+
+.callme__block{
+	display: flex;
+  justify-content: space-around;
+	margin-bottom: 20px;
+	border: 1px solid black;
+	border-radius: 10px;
+	margin: 5px;
+  padding: 10px 0 10px 0;
+}
+
+.order__item{
+	display: flex;
+  justify-content: space-around;
+	border: 1px solid black;
+	border-radius: 10px;
+	margin: 15px;
+	padding: 20px;
+}
+
+.order__text{
+	margin-top: 15px;
+	margin-right: 15px;
+}
+
+
+

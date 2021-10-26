@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var cors = require('cors');
 
 var indexRouter = require('./routes/index');
 const session = require('express-session');
@@ -13,9 +14,21 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
+app.set('trust proxy', 1);
+
+var cordOptions = {
+  origin: 'http://localhost:3000',
+  credentioals: true
+}
+
+app.use(cors(cordOptions));
+
 app.use(session({
   secret: 'AKSfna12nnJbniub241BQI23b21',
-  cookie: {maxAge: 60000}
+  key: 'express.sessionID',
+  cookie: {maxAge: 6000000},
+  saveUnitialized: false,
+  resave: false,
 }));
 app.use(logger('dev'));
 app.use(express.json());
